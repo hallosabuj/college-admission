@@ -1,0 +1,107 @@
+================================================================
+CREATE table "STUDENT_RECORD" (
+    "APP_ID"     VARCHAR2(120),
+    "NAME"       VARCHAR2(50),
+    "EMAIL"      VARCHAR2(50),
+    "MOBILE"     NUMBER(12),
+    "DOB"        VARCHAR2(12),
+    "PASSWORD"   VARCHAR2(20),
+    "APP_CATEGORY"   VARCHAR2(20),
+    constraint  "STUDENT_RECORD1_PK" primary key ("APP_ID")
+);
+/
+===============================================================
+CREATE table "STUDENT_DETAILS" (
+    "APP_ID"      VARCHAR2(120),
+    "DOB"         VARCHAR2(12),
+    "NAME"        VARCHAR2(50),
+    "FNAME"       VARCHAR2(50),
+    "MNAME"       VARCHAR2(50),
+    "GNAME"       VARCHAR2(50),
+    "GENDER"      VARCHAR2(10),
+    "RWG"         VARCHAR2(20),
+    "l_gurdian"     VARCHAR2(50),
+    "MT"          VARCHAR2(20),
+    "RELIGION"    VARCHAR2(20),
+    "NATIONALITY" VARCHAR2(30),
+    "HEIGHT"      NUMBER(10,3),
+    "WEIGHT"      NUMBER(10,3),
+    "B_GROUP"     VARCHAR2(6),
+    "EMAIL"       VARCHAR2(40),
+    "RESI_PHONE"  NUMBER(13),
+    "CANDI_PHONE" NUMBER(13),
+    "CATEGORY"    VARCHAR2(16),
+    "PHD"         VARCHAR2(6),
+    "F_EDU"       VARCHAR2(20),
+    "F_OCCU"      VARCHAR2(30),
+    "INCOME"      VARCHAR2(9),
+    "G_ADD"       VARCHAR2(150),
+    "G_EMAIL"     VARCHAR2(40),
+    "G_PHONE"     NUMBER(13),
+    "S_ADD"       VARCHAR2(100),
+    "S_VIL"       VARCHAR2(40),
+    "S_PS"        VARCHAR2(40),
+    "S_PO"        VARCHAR2(40),
+    "S_DIST"      VARCHAR2(40),
+    "S_PIN"       VARCHAR2(8),
+    "S_CON"       VARCHAR2(30),
+    "S_STATE"     VARCHAR2(40),
+    "LG_ADD"      VARCHAR2(150),
+    "LG_EMAIL"    VARCHAR2(40),
+    "LG_PHONE"    NUMBER(13),
+    constraint  "STUDENT_DETAILS_PK" primary key ("APP_ID")
+);
+/
+
+====================================================================
+CREATE TABLE  "STUDENT_ACADEMIC"
+   (    "APP_ID" VARCHAR2(150),
+    "DOB" VARCHAR2(12),
+    "ADMIT_NO" VARCHAR2(20),
+    "SUB1NAME" VARCHAR2(50),
+    "SUB2NAME" VARCHAR2(50),
+    "SUB3NAME" VARCHAR2(50),
+    "SUB4NAME" VARCHAR2(50),
+    "SUB5NAME" VARCHAR2(50),
+    "SUB6NAME" VARCHAR2(50),
+    "SUB1MARKS" VARCHAR2(10),
+    "SUB2MARKS" VARCHAR2(10),
+    "SUB3MARKS" VARCHAR2(10),
+    "SUB4MARKS" VARCHAR2(10),
+    "SUB5MARKS" VARCHAR2(10),
+    "SUB6MARKS" VARCHAR2(10),
+    "SCHOOL" VARCHAR2(100),
+    "SCHOOL_ADD" VARCHAR2(150),
+    "BOARD" VARCHAR2(100),
+    "YOP" VARCHAR2(5),
+    "T_NUMBER" VARCHAR2(10),
+     CONSTRAINT "STUDENT_ACADEMIC_PK" PRIMARY KEY ("APP_ID") ENABLE
+   )
+/
+
+
+/
+
+==================================================================
+CREATE TABLE  "STUDENT_SUBJECT"
+   (    "APP_ID" VARCHAR2(150) NOT NULL ENABLE,
+    "DOB" VARCHAR2(12),
+    "H_SUB" VARCHAR2(20),
+    "PASS1" VARCHAR2(20),
+    "PASS2" VARCHAR2(20),
+    "LANGUAGE" VARCHAR2(40),
+    "C_ENG" VARCHAR2(40),
+     CONSTRAINT "STUDENT_SUBJECT_PK" PRIMARY KEY ("APP_ID", "H_SUB") ENABLE
+   )
+/
+
+==================================================================================================
+CREATE table "STUDENT_IMAGE" (
+    "APP_ID"     VARCHAR2(120),
+    "DOB"        VARCHAR2(12),
+    "IMAGE"      BLOB,
+    "SIGNATURE"  BLOB,
+    constraint  "STUDENT_IMAGE_PK" primary key ("APP_ID")
+);
+/
+=================================================================================================
