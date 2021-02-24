@@ -1,8 +1,8 @@
 # College admission portal
 
-This application was used by Ramakrishna Mission Residential College, Narendrapur for admission in college in 2019.
+**This application was used by Ramakrishna Mission Residential College, Narendrapur for admission in college in 2019.**
 
-Language used for coding
+* Language used for coding
 
 	1. **JSP** for back-end and front-end as well.
 	2. **HTML** and **CSS** for designing purposes.
